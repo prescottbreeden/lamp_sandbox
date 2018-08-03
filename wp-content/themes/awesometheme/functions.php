@@ -11,7 +11,11 @@ add_action('wp_enqueue_scripts', 'awesome_script_enqueue');
 
 
 function awesome_theme_setup() {
+	
 	add_theme_support('menus');
+
+	register_nav_menu('primary', 'Primary Header Navigation');
+	register_nav_menu('footer', 'Footer Navigation');
 }
 
 add_action('init', 'awesome_theme_setup');
